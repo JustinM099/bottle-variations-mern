@@ -12,6 +12,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
 //paths go here app.use('/api/users') etc
+app.use('/api/users', require('./routes/userRoutes'))
 
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static(path.join(__dirname, '../frontend/build')))
