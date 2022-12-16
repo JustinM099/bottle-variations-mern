@@ -4,6 +4,13 @@ const momemt = require('moment')
 
 const postSchema = new Schema(
     {
+        postTitle: {
+            type: String,
+            required: true,
+            trim: true,
+            minLength: 1,
+            maxLength: 60
+        },
         postText: {
             type: String,
             required: true,
